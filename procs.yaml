@@ -1,0 +1,12 @@
+procs:
+  web:
+    shell: "cd web && bun run dev"
+    autoRestart: true
+  
+  server:
+    shell: "cd server && bun run dev"
+    autoRestart: true
+
+  bucket-server:
+    shell: "cd bucket-server && bun run dev"
+    autoRestart: true
