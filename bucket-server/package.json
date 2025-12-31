@@ -1,0 +1,32 @@
+{
+  "name": "bucket-server",
+ "module": "src/index.ts",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun --minify",
+    "start": "bun run dist/index.js",
+    "db:generate": "bun x prisma generate",
+    "db:migrate": "bun x prisma generate && bun x prisma migrate dev --name init",
+    "db:reset": "bun x prisma migrate reset",
+    "db:studio": "bun x prisma studio"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "winston": "^3.19.0"
+  }
+}
