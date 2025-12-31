@@ -34,8 +34,6 @@ app.get("/health", (req, res) => {
 const httpServer = http.createServer(app);
 
 
-
-
 app.use(morganMiddleware);
 app.use(errorHandler);
 
