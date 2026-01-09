@@ -1,5 +1,5 @@
 import winston from "winston";
-import { NODE_ENV } from "../env.js";
+import { NODE_ENV } from "../env";
 
 // Define custom severity levels
 const levels = {
